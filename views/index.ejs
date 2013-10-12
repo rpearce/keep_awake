@@ -1,0 +1,79 @@
+<% include layout_top %>
+  <div class="onepcssgrid-1000">
+    <header>
+      <h1>
+        <%= title %>
+        <small>
+          by
+          <a href="https://twitter.com/RobertWPearce" title="Link to RobertWPearce on Twitter">
+            @RobertWPearce
+          </a>
+        </small>
+      </h1>
+    </header>
+    <section class="clearfix">
+      <section class="col6">
+        <header>
+          <h2>What is it?</h2>
+        </header>
+        <p>
+          <%= title %> keeps your application from falling asleep by making an HTTP GET request to it about every 5 minutes.
+          <br />
+          <a href="http://www.youtube.com/watch?v=o6UCkugXn4Y" title="Link to Dune Quote on YouTube">
+            The sleeper must awaken.
+          </a>
+        </p>
+        <p>
+          <a href="https://github.com/rpearce/keep_awake" title="Link to KeepAwake on Github">
+            KeepAwake on Github
+          </a>
+        </p>
+      </section>
+
+      <section class="col6 last">
+        <header>
+          <h2 class="align-center">Add new domain</h2>
+        </header>
+        <form action="/create" method="post" accept-charset="utf-8">
+          <div class="clearfix">
+            <div class="col3 label-wrapper">
+              <label for="name">Name</label>
+            </div>
+            <div class="col9 last">
+              <input type="text" name="name" title="Name for your domain" />
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <div class="col3 label-wrapper">
+              <label for="url">URL</label>
+            </div>
+            <div class="col9 last">
+              <input type="text" name="url" title="URL of your domain" />
+            </div>
+          </div>
+
+          <div class="align-right">
+            <button type="submit">Add Domain</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <section>
+      <header>
+        <h2>Current domains</h2>
+      </header>
+
+      <% for (var i = 0; i < domains.length; i += 1) { %>
+        <% var domain = domains[i]; %>
+        <div class="domain-info">
+          <%= domain.name %><br />
+          <a href="<%= domain.url %>" title="Link to <%= domain.name %>">
+            <%= domain.url %>
+          </a>
+        </div>
+      <% } %>
+    </section>
+  </div>
+<% include layout_bottom %>
