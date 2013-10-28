@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -480,6 +481,12 @@ body {
   color: #6d6d6d;
   text-shadow: 0 -1px 0 white;
   padding: 15px; }
+
+.keep-awake-wrapper {
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px #cccccc; }
 
 a {
   cursor: pointer;
