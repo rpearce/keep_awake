@@ -43,7 +43,7 @@ If your Heroku app doesn't get traffic which justifies you spending $0.05/hr (~$
 One solution (with Ruby) is to create a rake task which performs an HTTP GET:
 
 ```ruby
-# Note: example is for HTTP request
+# Note: example is for HTTPS request
 namespace :my_app do
   task :call_page => :environment do
     require 'net/http'
