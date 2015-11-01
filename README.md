@@ -1,4 +1,7 @@
+_NOTE: THIS APPLICATION IS NO LONGER LIVE, AS HEROKU'S DYNO RESTRICTIONS HAVE CHANGED._
+
 # KeepAwake
+
 Give your app a good wakeup call with KeepAwake. The sleeper must awaken.
 
 ## Tools
